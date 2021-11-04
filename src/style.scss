@@ -1,0 +1,137 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono&display=swap');
+
+// Reset Styles
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Colors
+// https://coolors.co/1d2834-202c39-283845-78b561-fbf9f1-fdfcf8-f29559-f94b2d-14978a
+$gunmetal: #1d2834ff;
+$gunmetal-2: #202c39ff;
+$charcoal: #283845ff;
+$floral-white: #fbf9f1ff;
+$baby-powder: #fdfcf8ff;
+$white: #fff;
+$accent-orange: #f29559ff;
+$accent-red: #f94b2dff;
+$accent-blue: #117AAA;
+$accent-green: #78b561ff;
+
+$normal-font: 'Noto Sans', sans-serif;
+$monospace-font: 'Noto Sans Mono', monospace;
+
+
+:root {
+    --text: #1d2834ff;
+    --bg: #fff;
+    --fg: #FBF9F1;
+    --borders: #202c39ff;
+}
+
+body.dark {
+    --text: #FDFCF8;
+    --bg: #1d2834ff;
+    --fg: #283845ff;
+    --borders: #F9F5EA;
+}
+
+// Needed for Alpine JS
+[x-cloak] {
+    display: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    font-family: $normal-font;
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 16pt;
+}
+
+main {
+    margin: 0 auto;
+    width: min(1000px, 90%);
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--borders);
+    padding: 1rem;
+
+    h1 {
+        font-size: 28pt;
+    }
+}
+
+footer {
+    margin-top: 3rem;
+    border-top: 1px solid var(--borders);
+    padding: 1rem;
+}
+
+input {
+    font-family: $monospace-font;
+    background-color: var(--fg);
+    color: var(--text);
+    max-width: 100%;
+}
+
+.input button, input {
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+}
+
+.input {
+    margin-top: 3rem;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--fg);
+    color: var(--text);
+
+    &.red { background-color: $accent-red; }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &.link {
+        color: $accent-blue;
+
+        &:hover { text-decoration: underline; }
+    }
+
+    &.color-string { color: inherit; }
+}
+
+div.colors-container {
+    display: grid;
+    gap: 0.25rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.color-card {
+    padding: 1rem;
+    font-family: $monospace-font;
+
+    button {
+        width: 1em;
+        background-color: transparent;
+    }
+}
