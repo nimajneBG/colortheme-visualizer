@@ -1,5 +1,8 @@
 package.json
 package-lock.json
 node_modules/
-dist/
 .parcel-cache/
+.cache
+.node_repl_history
+*.log
+npm-debug.log*

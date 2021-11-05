@@ -33,17 +33,21 @@ $monospace-font: 'Noto Sans Mono', monospace;
 
 
 :root {
-    --text: #1d2834ff;
-    --bg: #fff;
-    --fg: #FBF9F1;
-    --borders: #202c39ff;
+    --text: #1d2834ff;      // gunmetal
+    --bg: #fff;             // white
+    --fg: #FBF9F1;          // floral-white
+    --borders: #202C39;     // gunmetal-2
+    --disabled-bg: #FDFCF8; // baby-powder
+    --disabled-fg: #283845; // charcoal
 }
 
 body.dark {
-    --text: #FDFCF8;
-    --bg: #1d2834ff;
-    --fg: #283845ff;
-    --borders: #F9F5EA;
+    --text: #FDFCF8;        // baby-powder
+    --bg: #1d2834ff;        // gunmetal
+    --fg: #283845ff;        // charcoal
+    --borders: #F9F5EA;     // floral-white
+    --disabled-bg: #202C39; // gunmetal-2
+    --disabled-fg: #F9F5EA; // floral-white
 }
 
 // Needed for Alpine JS
@@ -104,7 +108,17 @@ button {
     background-color: var(--fg);
     color: var(--text);
 
-    &.red { background-color: $accent-red; }
+    &.red {
+        background-color: $accent-red;
+        color: $baby-powder;
+    }
+
+    &.green { background-color: $accent-green; }
+
+    &[disabled] { 
+        background-color: var(--disabled-bg);
+        color: var(--disabled-fg);
+    }
 }
 
 a {

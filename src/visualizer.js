@@ -3,6 +3,21 @@ import tinycolor from 'tinycolor2'
 const lightTextColor = '#fff'
 const darkTextColor = '#1d2834ff'
 
+function handleResize() {
+    /* Max 3 columns for a screen size over 700px 2 columns for everything 
+       below that and one for anything below 450px */
+    const width = window.innerWidth
+    if (width < 700) {
+        if (width > 450) {
+            return 2
+        } else {
+            return 1
+        }
+    } else {
+        return 3
+    }
+}
+
 export default function() { 
     return {
         newColor: tinycolor.random().toHexString(),
@@ -11,31 +26,9 @@ export default function() {
         maxColumns: null,
 
         init() {
-            window.onresize = () => {
-                /* Max 3 columns for a screen size over 700px 2 columns for everything 
-                below that and one for anything below 450px */
-                const width = window.screen.width
-                if (width < 700) {
-                    if (width > 450) {
-                        this.maxColumns = 2
-                    } else {
-                        this.maxColumns = 1
-                    }
-                } else {
-                    this.maxColumns = 3
-                }
-            }
+            window.onresize = () => { this.maxColumns = handleResize() }
 
-            const width = window.screen.width
-            if (width < 700) {
-                if (width > 450) {
-                    this.maxColumns = 2
-                } else {
-                    this.maxColumns = 1
-                }
-            } else {
-                this.maxColumns = 3
-            }
+            this.maxColumns = handleResize()
         },
 
         addColor() {
@@ -83,8 +76,6 @@ export default function() {
             }
         },
 
-        get inputIsValid() {
-            return true
-        }
+        get inputIsValid() { return tinycolor(this.newColor).isValid() }
     }
 }
