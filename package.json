@@ -1,0 +1,24 @@
+{
+  "name": "colortheme-visulizer",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, not IE 11",
+  "scripts": {
+    "start": "parcel --no-hmr",
+    "build": "parcel build --no-source-maps --dist-dir docs",
+    "deploy": "read  -p 'Press enter to deploy... ' && npm run build && git add . && git commit -a -m 'latest build' && git push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alpinejs/persist": "^3.4.2",
+    "alpinejs": "^3.4.2",
+    "tinycolor2": "^1.4.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0",
+    "parcel": "^2.0.0"
+  }
+}

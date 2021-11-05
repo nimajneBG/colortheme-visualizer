@@ -1,8 +1,7 @@
-package.json
-package-lock.json
 node_modules/
 .parcel-cache/
 .cache
+dist/
 .node_repl_history
 *.log
 npm-debug.log*
