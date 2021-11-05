@@ -13,9 +13,7 @@ function handleResize() {
         } else {
             return 1
         }
-    } else {
-        return 3
-    }
+    } else { return 3 }
 }
 
 export default function() { 
