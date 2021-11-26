@@ -5,3 +5,4 @@ dist/
 .node_repl_history
 *.log
 npm-debug.log*
+desings/

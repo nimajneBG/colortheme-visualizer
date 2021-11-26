@@ -51,9 +51,7 @@ body.dark {
 }
 
 // Needed for Alpine JS
-[x-cloak] {
-    display: none;
-}
+[x-cloak] { display: none; }
 
 body {
     display: flex;
@@ -79,6 +77,12 @@ header {
     h1 {
         font-size: 28pt;
     }
+}
+
+.noscript {
+    background-color: $accent-red;
+    color: $baby-powder;
+    padding: 1rem 2rem;
 }
 
 footer {

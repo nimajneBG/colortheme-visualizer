@@ -6,7 +6,7 @@
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, not IE 11",
   "scripts": {
     "start": "parcel --no-hmr",
-    "build": "parcel build --no-source-maps --dist-dir docs --public-url https://nimajnebg.github.io/colortheme-visulizer/",
+    "build": "parcel build --no-source-maps --dist-dir docs --public-url https://nimajnebg.github.io/colortheme-visualizer/",
     "deploy": "read  -p 'Press enter to deploy... ' && npm run build && git add . && git commit -a -m 'latest build' && git push"
   },
   "keywords": [],
