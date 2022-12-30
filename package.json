@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@alpinejs/persist": "^3.4.2",
     "alpinejs": "^3.4.2",
